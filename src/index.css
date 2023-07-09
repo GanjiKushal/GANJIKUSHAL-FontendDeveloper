@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img{
+  max-width: 100%;
+  width: 100%;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0;
+  font-family:"Inter",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gradient-to-br from-stone-900 to-slate-900;
+}
+
+.btn{
+    @apply py-2 px-8 border-white border-2 bg-transparent text-white hover:opacity-75 transition-all duration-200;
+}
+.heading {
+  @apply text-white font-bold text-3xl md:text-4xl xl:text-5xl;
+}
+
+
+p{
+  line-height: 1.8;
+  @apply text-sm;  
+}
+.showcase{
+  background: url('./bg-image.jpg') no-repeat center/cover ;
+  height: calc(100vh - 0.1px);
+  height: 100%;
+  
+}
+.showcase .overlay{
+  padding: 8rem 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and  (min-width: 1024px) {
+  .showcase
+   {
+    height: 100vh;
+    
+  }
+  .capsulesContainer{
+    height: 100vh;
+  }
+  .footerContainer{
+    height: 30vh;
+    @apply text-white
+    bg-slate-600;
+    padding-top: 1rem;
+  }
+}
+.max-width{
+  @apply max-w-6xl mx-auto
+}
+
+.articles{
+  @apply bg-stone-900 px-5 py-2 rounded-lg shadow shadow-emerald-200 text-sm; 
+  height: 14.5rem;
+}
+.capsulesContainer{
+  height: 100%;
+ 
+}
+
+.pagination{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem ;
+  font-size: 1.2rem;
+  gap: 2rem;
+ 
+}
+
+.page-item{
+   padding: 0.3rem 0.8rem;
+   cursor: pointer;
+   border-radius: 3px;
+   font-weight: 700;
+   background-color: aliceblue;
+   border-radius: 50%;
+   @apply text-green-600 shadow shadow-emerald-200
+}
+.cont-footer-container .pages .active {
+  @apply text-rose-600
+}
+
+.searchContainer{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainer{
+  height: 100%;
+  @apply text-white
+  bg-slate-800;
+  padding-top: 1rem;
+}
+
+.popUpContainer{
+  width: 40rem;
+  height: auto;
+}
+.popUpContainer header{
+  border-radius: 0.3rem;
+}
+
+.popupMainContainer{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
